@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { getDirections, type Coordinates, type DirectionsRequest } from '../api/getmap';
+	import { getDirections, type Coordinates, type DirectionsRequest } from '@/api/getmap';
 	import { Button } from '$lib/components/ui/button';
 
 	export let currentLocation: Coordinates;
@@ -49,7 +49,6 @@
 
 <div class="flex flex-row space-x-5">
 	<div>
-		<p class="text-xl">Route</p>
 		<Button on:click={onClick}>Get Directions</Button>
 	</div>
 	<div>

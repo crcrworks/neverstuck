@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Button } from '$lib/components/ui/button';
-	import type { Coordinates } from '../api/getmap';
+	import type { Coordinates } from '@/api/getmap';
 	import Geolocation from 'svelte-geolocation';
 
 	export let currentLocation: Coordinates;
@@ -13,6 +13,7 @@
 	getPosition={getPositionAgain}
 	watch={true}
 	on:position={(e) => {
+		console.log(e);
 		detail = e.detail;
 		currentLocation = {
 			latitude: detail.coords.latitude,
@@ -21,8 +22,7 @@
 	}}
 />
 
-<div>
-	<p class="text-xl">Current Location</p>
+<div class="space-y-3">
 	<Button
 		class="size-sm"
 		on:click={() => {

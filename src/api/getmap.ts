@@ -1,5 +1,5 @@
 const BING_MAPS_API_KEY = import.meta.env.VITE_BING_MAPS_API_KEY;
-const type = 'Warking';
+const type = 'Walking';
 const endpoint = 'http://dev.virtualearth.net/REST/v1/Routes';
 
 export type Coordinates = {
