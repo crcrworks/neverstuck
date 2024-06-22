@@ -27,6 +27,5 @@
 		<CurrentLocation bind:currentLocation />
 		<Route {currentLocation} />
 	</div>
-	<hr />
 	<Database />
 </div>
