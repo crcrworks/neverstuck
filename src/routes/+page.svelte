@@ -11,11 +11,12 @@
 </script>
 
 <div class="flex flex-col m-10 space-y-5">
-	<div class="flex flex-row space-x-20">
+	<div class="flex flex-row space-x-5">
 		<CurrentLocation bind:currentLocation />
 		<Route {currentLocation} />
 	</div>
-	<Time />
 	<hr />
+
+	<Time />
 	<TrafficSignal />
 </div>

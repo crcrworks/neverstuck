@@ -20,13 +20,12 @@
 
 		let directionsReq: DirectionsRequest = {
 			origin: { latitude, longitude },
-			destination: { latitude: 34.81043, longitude: 135.55898 }
+			destination: { latitude: 34.52587, longitude: 135.50544 }
 		};
 
 		getDirections(directionsReq)
 			.then((res) => {
 				res.json().then((data) => {
-					console.log(data);
 					const resources = data.resourceSets[0].resources[0];
 					routeData = {
 						origin: { latitude: resources.bbox[0], longitude: resources.bbox[1] },

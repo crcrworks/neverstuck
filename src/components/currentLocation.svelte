@@ -13,7 +13,6 @@
 	getPosition={getPositionAgain}
 	watch={true}
 	on:position={(e) => {
-		console.log(e);
 		detail = e.detail;
 		currentLocation = {
 			latitude: detail.coords.latitude,
@@ -24,10 +23,11 @@
 
 <div class="space-y-3">
 	<Button
-		class="size-sm"
+		data-active={getPositionAgain}
+		class="size-sm bg-black data-[active=true]:bg-red-500"
 		on:click={() => {
 			getPositionAgain = !getPositionAgain;
-		}}>Get Current Location</Button
+		}}>Update Current Location</Button
 	>
 	{#if currentLocation}
 		<p>{currentLocation.latitude} , {currentLocation.longitude}</p>

@@ -28,11 +28,11 @@
 
 <div class="space-y-5">
 	<div class="flex flex-col space-y-2">
-		<p class="text-2xl font-bold">{$selectedTS.name}</p>
-		<p>( {$selectedTS.location.latitude}, {$selectedTS.location.longitude} )</p>
+		<p class="text-2xl font-bold">{$selectedTS?.name}</p>
+		<p>( {$selectedTS?.location.latitude}, {$selectedTS?.location.longitude} )</p>
 	</div>
 	<Table.Root>
-		<Table.Caption>A list of signal information</Table.Caption>
+		<Table.Caption>A list of light information</Table.Caption>
 		<Table.Header>
 			<Table.Row>
 				<Table.Head class="w-[100px]">Color</Table.Head>

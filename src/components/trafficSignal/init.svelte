@@ -27,7 +27,7 @@
 	});
 </script>
 
-<div class="flex flex-row space-x-20 items-stretch">
+<div class="flex flex-row space-x-5 items-stretch">
 	<TrafficSignals />
 	<StatusList />
 </div>

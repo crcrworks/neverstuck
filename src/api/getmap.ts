@@ -21,5 +21,13 @@ export async function getDirections(req: DirectionsRequest) {
 	}
 
 	const url = `${endpoint}/${type}?wp.0=${originLatitude},${originLongitude}&wp.1=${destLatitude},${destLongitude}&key=${BING_MAPS_API_KEY}`;
-	return await fetch(url);
+	return await fetch(url, {
+		method: 'GET',
+		mode: 'cors',
+		headers: {
+			'Content-Type': 'application/json',
+			credentials: 'include',
+			'Access-Control-Allow-Origin': '*'
+		}
+	});
 }

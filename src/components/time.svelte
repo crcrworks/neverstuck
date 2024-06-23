@@ -24,5 +24,5 @@
 </script>
 
 <div>
-	<p>{hours}:{minutes}:{seconds}</p>
+	<p class="text-xl">{hours}:{minutes}:{seconds}</p>
 </div>
